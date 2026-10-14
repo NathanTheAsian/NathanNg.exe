@@ -1,0 +1,14 @@
+@import url("styles/desktop.css");
+@import url("styles/typography.css?v=2");
+@import url("styles/terminal.css?v=2");
+
+.desktop-caption h1, .desktop-caption p, .terminal-hint { white-space: pre-line; }
+#titlebar, .terminal-title {
+  cursor: grab;
+  user-select: none;
+  touch-action: none;
+}
+#titlebar.dragging, .terminal-title.dragging { cursor: grabbing; }
+.process-expander { flex: 0 0 10px; color: #748594; font-size: 16px; }
+.subprocess .process-name { font-size: 11px; }
+

@@ -1,0 +1,741 @@
+:root {
+  font-family:'Segoe UI',Arial,sans-serif;
+  color:#222;
+  font-size:13px
+}
+* {
+  box-sizing:border-box
+}
+body {
+  margin:0;
+  background:#22272e
+}
+button {
+  font:inherit;
+  color:inherit;
+  cursor:pointer
+}
+button:focus-visible {
+  outline:2px solid #176bbc;
+  outline-offset:2px
+}
+#desktop {
+  min-height:100dvh;
+  background:radial-gradient(ellipse at 82% 66%,#354452 0,transparent 55%),linear-gradient(120deg,#20252c,#252d35);
+  overflow:hidden;
+  position:relative;
+  padding:11vh 0 100px
+}
+#desktop:before {
+  content:'n.';
+  position:absolute;
+  right:7%;
+  top:20%;
+  font-weight:700;
+  font-size:40vw;
+  line-height:1;
+  color:#ffffff03;
+  letter-spacing:-.1em;
+  pointer-events:none
+}
+.desktop-caption {
+  position:absolute;
+  right:6%;
+  top:23%;
+  color:#e4e9ec;
+  width:25%;
+  
+}
+.desktop-caption>span {
+  font:10px monospace;
+  letter-spacing:3px;
+  color:#91a1ae
+}
+.desktop-caption h1 {
+  font-size:clamp(24px,3vw,44px);
+  font-weight:300;
+  line-height:1.17;
+  letter-spacing:-1px;
+  margin:22px 0
+}
+.desktop-caption p {
+  color:#9aa8b4;
+  line-height:1.9;
+  font-size:12px
+}
+.desktop-icons {
+  position:absolute;
+  left:15px;
+  top:24px;
+  display:flex;
+  flex-direction:column;
+  gap:25px
+}
+.desktop-icons button {
+  width:80px;
+  color:#e1e7eb;
+  background:none;
+  border:0;
+  font-size:11px;
+  text-shadow:0 1px 3px #000
+}
+.desktop-icons button:hover {
+  background:#ffffff13
+}
+.desktop-icon {
+  display:block;
+  margin:0 auto 7px;
+  font-size:29px;
+  text-shadow:none
+}
+.chart-icon {
+  color:#96dfc9
+}
+.file-icon {
+  color:#c5dce9
+}
+.restart-icon {
+  color:#a8b9ce
+}
+.window {
+  position:relative;
+  margin-left:12%;
+  width:62%;
+  max-width:930px;
+  background:#fff;
+  box-shadow:0 20px 70px #0006,0 1px 7px #0005;
+  border:1px solid #90959a;
+  z-index:2;
+  animation:window-in .35s ease-out;
+  
+}
+.window.maximized {
+  position:fixed;
+  inset:0 0 44px;
+  width:100%;
+  max-width:none;
+  margin:0;
+  display:flex;
+  flex-direction:column
+}
+.window.maximized #content {
+  flex:1
+}
+#titlebar {
+  height:32px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding-left:9px;
+  font-size:12px;
+  user-select:none;
+  cursor:move
+}
+.tiny-icon {
+  color:#368daa;
+  font-size:16px;
+  margin-right:6px
+}
+.window-controls {
+  display:flex;
+  height:100%
+}
+.window-controls button {
+  border:0;
+  background:white;
+  width:43px;
+  font-size:17px
+}
+.window-controls button:hover {
+  background:#e7e7e7
+}
+.window-controls #close:hover {
+  background:#e34b43;
+  color:white
+}
+.menu {
+  height:28px;
+  border-bottom:1px solid #e5e5e5;
+  display:flex;
+  align-items:center;
+  gap:16px;
+  padding:0 10px;
+  font-size:11px;
+  color:#565c63
+}
+.menu button {
+  background:none;
+  border:0;
+  padding:0;
+  text-decoration:underline
+}
+.preview-label {
+  margin-left:auto;
+  color:#8a9096;
+  font-size:10px
+}
+nav {
+  display:flex;
+  padding:4px 5px 0;
+  background:#fafafa;
+  border-bottom:1px solid #d1d1d1;
+  gap:1px
+}
+nav button {
+  padding:5px 9px;
+  background:#eee;
+  border:1px solid #d5d5d5;
+  border-bottom:0;
+  font-size:12px
+}
+nav button.active {
+  background:#fff;
+  position:relative;
+  top:1px;
+  padding-top:4px
+}
+#content {
+  height:480px;
+  overflow:auto
+}
+.process-table {
+  width:100%;
+  border-collapse:collapse;
+  table-layout:fixed
+}
+.process-table th {
+  font-weight:400;
+  color:#6a7785;
+  text-align:right;
+  border-right:1px solid #e4e4e4;
+  padding:15px 9px 6px;
+  font-size:11px;
+  vertical-align:bottom;
+  border-bottom:1px solid #bbb
+}
+.process-table th:first-child {
+  width:39%;
+  text-align:left
+}
+.process-table th:nth-child(2) {
+  width:17%;
+  text-align:left
+}
+.process-table th strong {
+  display:block;
+  font-size:20px;
+  font-weight:400;
+  color:#343a41;
+  margin-bottom:5px
+}
+.group td {
+  padding:19px 10px 9px;
+  color:#286eb4;
+  font-size:16px;
+  font-weight:400
+}
+.process-row {
+  cursor:pointer;
+  outline-offset:-2px
+}
+.process-row td {
+  padding:10px 9px;
+  font-size:12px;
+  border-right:1px solid #eee
+}
+.process-row td:nth-child(n+3) {
+  background:#fff5ce;
+  text-align:right
+}
+.process-row td.heat {
+  background:#ffeaa2
+}
+.process-row:hover td {
+  background:#e6f2fd
+}
+.process-row.selected td {
+  background:#cce8ff
+}
+.process-name {
+  display:flex;
+  gap:10px;
+  align-items:center
+}
+.chevron {
+  color:#a2a7ad;
+  font-size:17px
+}
+.process-icon {
+  font-size:11px;
+  width:20px;
+  height:20px;
+  display:inline-grid;
+  place-items:center;
+  background:var(--icon);
+  color:#fff;
+  border-radius:3px
+}
+.process-icon-image {
+  width:20px;
+  height:20px;
+  display:block;
+  object-fit:cover;
+  border-radius:3px;
+  flex-shrink:0
+}
+.status {
+  color:#6d7972;
+  font-size:11px!important
+}
+.status span {
+  color:#469769
+}
+.table-note {
+  margin:19px 12px;
+  font-size:10px;
+  color:#899099;
+  line-height:1.6
+}
+.window-footer {
+  height:46px;
+  border-top:1px solid #ddd;
+  background:#fafafa;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:0 11px;
+  font-size:11px
+}
+.window-footer i {
+  display:inline-block;
+  width:6px;
+  height:6px;
+  background:#6aa789;
+  border-radius:50%;
+  margin-right:7px
+}
+.window-footer button {
+  border:1px solid #b8b8b8;
+  background:#e8e8e8;
+  padding:4px 14px;
+  font-size:11px
+}
+.window-footer button:disabled {
+  color:#999
+}
+.desktop-note {
+  position:absolute;
+  bottom:78px;
+  left:12%;
+  font:10px monospace;
+  letter-spacing:2px;
+  color:#a1abb6
+}
+.desktop-note span {
+  margin-left:25px;
+  color:#677682;
+  font-size:9px
+}
+.taskbar {
+  position:fixed;
+  bottom:0;
+  left:0;
+  right:0;
+  height:44px;
+  display:flex;
+  align-items:center;
+  background:#17212ce8;
+  backdrop-filter:blur(20px);
+  z-index:10;
+  color:#e3e9ed;
+  border-top:1px solid #ffffff10
+}
+.taskbar button {
+  height:44px;
+  min-width:49px;
+  background:none;
+  border:0;
+  color:#b5ddeb;
+  font-size:24px
+}
+.taskbar button:hover {
+  background:#ffffff13
+}
+.taskbar-name {
+  font-size:12px;
+  color:#aebbc6;
+  padding:0 22px 0 7px
+}
+#task-manager {
+  border-bottom:2px solid #82b5d8;
+  background:#ffffff0c
+}
+.tray {
+  margin-left:auto;
+  display:flex;
+  align-items:center;
+  gap:13px;
+  padding:0 16px;
+  font-size:10px
+}
+.online {
+  color:#8cb39d;
+  font-size:8px
+}
+#clock {
+  white-space:pre-line;
+  text-align:right;
+  line-height:1.5;
+  margin-left:15px
+}
+.tab-page {
+  padding:30px
+}
+.eyebrow {
+  font-size:10px;
+  letter-spacing:2px;
+  color:#7e8e9d;
+  text-transform:uppercase
+}
+.tab-page h2 {
+  font-weight:400;
+  font-size:26px;
+  margin:12px 0
+}
+.tab-page p {
+  line-height:1.8;
+  color:#6c7680;
+  max-width:520px
+}
+.metric {
+  margin-top:24px
+}
+.metric>div {
+  display:flex;
+  justify-content:space-between;
+  color:#526c81;
+  font-size:12px
+}
+.meter {
+  height:7px;
+  background:#edf2f5;
+  margin-top:9px
+}
+.meter i {
+  display:block;
+  height:100%;
+  background:#80a9c7
+}
+.timeline {
+  border-left:1px solid #cbd7e1;
+  padding-left:23px;
+  margin-top:30px
+}
+.timeline h3 {
+  font-weight:500
+}
+.detail-panel {
+  position:fixed;
+  z-index:12;
+  right:22px;
+  top:70px;
+  width:340px;
+  max-width:calc(100% - 32px);
+  background:#f9fbfc;
+  padding:34px;
+  box-shadow:0 15px 90px #0007;
+  border:1px solid #c1c9d0
+}
+.detail-panel h2 {
+  font-size:27px;
+  font-weight:400
+}
+.detail-panel p {
+  font-size:13px;
+  line-height:1.9;
+  color:#667583
+}
+.detail-panel #dismiss {
+  position:absolute;
+  right:8px;
+  top:7px;
+  background:none;
+  border:0;
+  font-size:23px
+}
+.tag {
+  display:inline-block;
+  border:1px solid #c7d4df;
+  padding:5px 8px;
+  margin:3px;
+  font-size:10px;
+  color:#526f86
+}
+#boot {
+  position:fixed;
+  inset:0;
+  background:#080b0e;
+  color:#b9c9c4;
+  z-index:100;
+  padding:8vh 8vw;
+  font:12px/2 monospace
+}
+.boot-console {
+  max-width:600px
+}
+.boot-console p {
+  letter-spacing:2px
+}
+.boot-console span {
+  color:#63766e;
+  margin-left:25px
+}
+.boot-console hr {
+  border:0;
+  border-top:1px solid #28312e;
+  margin:20px 0
+}
+.boot-line {
+  animation:line-in .15s;
+  white-space:pre-wrap
+}
+.ok {
+  color:#81bb9d
+}
+.cursor {
+  animation:blink .7s infinite
+}
+.welcome {
+  display:none;
+  text-align:center;
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  font-family:'Segoe UI',sans-serif
+}
+.brand-mark {
+  font-size:90px;
+  font-weight:600;
+  letter-spacing:-8px;
+  line-height:1
+}
+.brand-mark span {
+  color:#87bfa8
+}
+.welcome h1 {
+  font-size:19px;
+  font-weight:400;
+  letter-spacing:4px;
+  margin-top:25px;
+  color:#dce5e1
+}
+.welcome p {
+  font-size:11px;
+  color:#7c8d84
+}
+.spinner {
+  height:23px;
+  width:23px;
+  border:2px solid #34463e;
+  border-top-color:#b5d9c7;
+  border-radius:50%;
+  animation:spin 1s linear infinite;
+  margin:30px auto 16px
+}
+#boot.welcoming .boot-console {
+  display:none
+}
+#boot.welcoming .welcome {
+  display:block;
+  animation:line-in .4s
+}
+#skip {
+  position:absolute;
+  right:30px;
+  bottom:28px;
+  color:#a2b4aa;
+  border:1px solid #34433b;
+  background:none;
+  padding:8px 15px;
+  font-size:11px
+}
+.boot-foot {
+  position:absolute;
+  bottom:34px;
+  left:8vw;
+  color:#506359;
+  font-size:9px;
+  letter-spacing:2px
+}
+#boot.finished {
+  opacity:0;
+  visibility:hidden;
+  transition:opacity .4s,visibility .4s
+}
+@keyframes blink {
+  50% {
+  opacity:0
+}
+
+}
+@keyframes spin {
+  to {
+  transform:rotate(360deg)
+}
+
+}
+@keyframes line-in {
+  from {
+  opacity:0
+}
+to {
+  opacity:1
+}
+
+}
+@keyframes window-in {
+  from {
+  opacity:0;
+  transform:translateY(9px)
+}
+to {
+  opacity:1;
+  transform:translateY(0)
+}
+
+}
+@media(min-width:1500px) {
+  .window {
+  width:58%
+}
+.desktop-caption {
+  right:7%
+}
+
+}
+@media(max-width:900px) {
+  .desktop-caption {
+  display:none
+}
+.window {
+  margin-left:115px;
+  width:calc(100% - 140px)
+}
+.preview-label {
+  display:none
+}
+.desktop-note {
+  left:115px
+}
+
+}
+@media(max-width:600px) {
+  #desktop {
+  padding:90px 10px 100px
+}
+.desktop-icons {
+  flex-direction:row;
+  gap:7px;
+  top:12px;
+  left:12px
+}
+.desktop-icons button {
+  font-size:9px
+}
+.desktop-icon {
+  font-size:23px;
+  margin-bottom:1px
+}
+.window {
+  margin:0;
+  width:100%
+}
+#content {
+  height:450px
+}
+nav button {
+  padding:6px;
+  font-size:10px
+}
+.process-table th:first-child {
+  width:43%
+}
+.process-table th:nth-child(2) {
+  width:20%
+}
+.process-table th {
+  padding:12px 5px 6px;
+  font-size:9px
+}
+.process-table th strong {
+  font-size:17px
+}
+.process-row td {
+  padding:10px 5px;
+  font-size:10px
+}
+.process-name {
+  gap:5px
+}
+.process-icon {
+  width:16px;
+  height:16px;
+  flex-shrink:0
+}
+.chevron {
+  display:none
+}
+.desktop-note {
+  left:20px;
+  bottom:66px
+}
+.desktop-note span {
+  display:none
+}
+.tray>span {
+  display:none
+}
+.window-footer {
+  font-size:9px
+}
+.boot-foot {
+  display:none
+}
+#boot {
+  font-size:10px
+}
+.tab-page {
+  padding:22px
+}
+.window.maximized {
+  bottom:44px
+}
+
+}
+@media(prefers-reduced-motion:reduce) {
+  *,*:before,*:after {
+  animation:none!important;
+  transition:none!important
+}
+
+}
+
+
+[hidden] {
+  display:none!important
+}
+.desktop-projects{display:block;width:80px;text-align:center;color:#e1e7eb;font-size:11px;text-decoration:none}
+.desktop-caption h1{font-size:clamp(20px,2.2vw,34px);overflow-wrap:break-word}
+.desktop-projects:hover{background:#ffffff13}
+.recruiter-contact{position:fixed;right:22px;bottom:57px;z-index:8;display:flex;gap:16px;padding:10px 14px;background:#20272ef2;border:1px solid #637b89;border-radius:5px;font:12px 'Segoe UI',sans-serif}
+.recruiter-contact a{color:#c4ebdf;text-underline-offset:3px}
+.tab-page a{color:#1766a5;text-underline-offset:3px;margin-right:16px}
+.desktop-projects:focus-visible,.recruiter-contact a:focus-visible{outline:2px solid #a9ddcf;outline-offset:4px}
+@media(max-width:600px){.desktop-projects{width:62px;font-size:9px}.recruiter-contact{right:10px;bottom:52px;font-size:11px;gap:12px;padding:8px}.desktop-note{display:none}}
+@media(min-width:901px) {
+  .window:not(.maximized) {
+  width:56%
+}
+
+}

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width,initial-scale=1" name="viewport"/>
+  <title>
+   CEG 2136 Labs &mdash; Nathan Ng
+  </title>
+  <meta content="Nathan Ng’s Computer Architecture I labs: organized Quartus schematics, digital components, and the progression toward a 4-bit CPU." name="description"/>
+  <link href="../styles/projects.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <header>
+   <a href="../index.html">
+    n. / Back to desktop
+   </a>
+   <a href="index.html">
+    All projects
+   </a>
+  </header>
+  <main>
+   <p class="eyebrow">
+    COURSEWORK / Labs 1–3 completed · Lab 4 in progress
+   </p>
+   <h1>
+    CEG 2136 &middot; Architecture Labs
+   </h1>
+   <p class="lead">
+    Designing components to complete specific tasks, then bringing them together in an end-of-semester 4-bit CPU.
+   </p>
+   <p class="stack">
+    Computer Architecture I &middot; Quartus &middot; Digital logic &middot; Individual labs
+   </p>
+   <nav class="actions">
+    <a href="https://github.com/NathanTheAsian/CEG2136" rel="noopener noreferrer" target="_blank">
+     Course builds on GitHub &nearrow;
+    </a>
+   </nav>
+   <section aria-labelledby="course-heading">
+    <h2 id="course-heading">From individual components to a CPU</h2>
+    <p>
+     CEG 2136 is about computer architecture: understanding how components work,
+     designing them to perform specific tasks, and connecting them into a larger system.
+     Each lab is a step toward the final project, a 4-bit CPU with a control unit and ALU.
+     I completed Labs 1–3 individually using Quartus Web Edition and FPGA testing.
+     Lab 4 is in progress, with its blueprint drafted.
+    </p>
+   </section>
+
+   <section aria-labelledby="approach-heading">
+    <h2 id="approach-heading">Organization is part of the design</h2>
+    <p>
+     I take this course as a challenge to be as organized as I can be. Before placing
+     components in a Quartus Block Diagram File (BDF), I plan their spacing and the
+     routes the wires will take. I want the layout to make the connections easy to
+     follow, with enough room for each component and the signals around it.
+    </p>
+    <p>
+     My BDF files show that approach: the layout is something I plan alongside the
+     logic. As the labs build toward a CPU, keeping the individual parts readable
+     becomes an increasingly important part of how I work.
+    </p>
+   </section>
+
+   <nav class="actions" aria-label="Lab sections">
+    <a href="#lab-1">Lab 1</a>
+    <a href="#lab-2">Lab 2 · Counters</a>
+    <a href="#lab-3">Lab 3</a>
+    <a href="#lab-4">Lab 4 · 4-bit CPU</a>
+   </nav>
+
+   <section id="lab-1">
+    <p class="eyebrow">LAB 1 / Completed</p>
+    <h2>Starting the lab sequence</h2>
+    <p>
+     My first completed lab in the sequence. The Quartus project and BDF are available
+     below, alongside the later builds in the course repository.
+    </p>
+    <nav class="actions" aria-label="Lab 1 source">
+     <a href="https://github.com/NathanTheAsian/CEG2136/tree/main/labs/Lab1" target="_blank" rel="noopener noreferrer">Lab 1 project ↗</a>
+     <a href="https://github.com/NathanTheAsian/CEG2136/blob/main/labs/Lab1/Lab1.bdf" target="_blank" rel="noopener noreferrer">Lab 1 BDF ↗</a>
+    </nav>
+   </section>
+
+   <section id="lab-2">
+    <p class="eyebrow">LAB 2 / Completed</p>
+    <h2>
+     From components to a complete counter
+    </h2>
+    <p>
+     I completed this lab individually using Quartus Web Edition. The schematics below show the overall modulo-60 design, followed by the BCD and modulo-6 circuits that make it up. Select any figure to open the full-size schematic.
+    </p>
+    <figure>
+     <a href="../assets/ceg2136-lab2-mod60.png">
+      <img alt="Quartus top-level schematic connecting BCD and modulo-6 counter blocks, with clock input and FPGA output pin assignments." height="425" src="../assets/ceg2136-lab2-mod60.png" width="945"/>
+     </a>
+     <figcaption>
+      <strong>
+       Figure 1 &mdash; Modulo-60 counter.
+      </strong>
+      The top-level Quartus schematic combines the BCD and modulo-6 counter blocks, showing their interconnections, clock input, and FPGA pin assignments.
+     </figcaption>
+    </figure>
+    <figure>
+     <a href="../assets/ceg2136-lab2-bcd.png">
+      <img alt="BCD counter schematic with four JK flip-flops, combinational logic, outputs Q3 through Q0, and a BRO output." height="641" loading="lazy" src="../assets/ceg2136-lab2-bcd.png" width="642"/>
+     </a>
+     <figcaption>
+      <strong>
+       Figure 2 &mdash; BCD counter.
+      </strong>
+      Four JK flip-flops and combinational logic form the decimal counting stage, with outputs Q3&ndash;Q0 and the BRO signal used in the combined design.
+     </figcaption>
+    </figure>
+    <figure>
+     <a href="../assets/ceg2136-lab2-mod6.png">
+      <img alt="Modulo-6 counter schematic with three JK flip-flops, count and clock inputs, logic gates, and outputs Q2 through Q0 and RO." height="535" loading="lazy" src="../assets/ceg2136-lab2-mod6.png" width="796"/>
+     </a>
+     <figcaption>
+      <strong>
+       Figure 3 &mdash; Modulo-6 counter.
+      </strong>
+      Three JK flip-flops and their control logic form the six-state counting stage, with count and clock inputs and outputs Q2&ndash;Q0 and RO.
+     </figcaption>
+    </figure>
+   </section>
+   <section id="lab-3">
+    <p class="eyebrow">LAB 3 / Completed</p>
+    <h2>Continuing the architecture lab sequence</h2>
+    <p>
+     Lab 3 is also complete. It is part of the same progression of individual design
+     and FPGA testing work leading into the final CPU project.
+    </p>
+   </section>
+
+   <section id="lab-4">
+    <p class="eyebrow">LAB 4 / In progress</p>
+    <h2>Bringing it together: a 4-bit CPU</h2>
+    <p>
+     The end-of-semester project brings the course’s component-level work together
+     in a 4-bit CPU with a control unit and ALU. I have drafted the blueprint and am
+     applying the same layout-first approach: planning component spacing and wire
+     routes before placing the design in the BDF.
+    </p>
+    <p>
+     This is the point where the organization of the smaller designs matters most
+     to me: I want the finished schematic to be understandable as a complete system.
+    </p>
+   </section>
+
+   <section class="contact">
+    <p class="eyebrow">
+     LET&rsquo;S BUILD SOMETHING
+    </p>
+    <h2>
+     Available for co-op &middot; January 1, 2027
+    </h2>
+    <nav class="actions">
+     <a href="mailto:Nathan626ng@gmail.com">
+      Email Nathan
+     </a>
+     <a href="https://www.linkedin.com/in/nathanckng/" rel="noopener noreferrer" target="_blank">
+      LinkedIn &nearrow;
+     </a>
+     <a href="../assets/NathanNgResume.pdf">
+      R&eacute;sum&eacute; (PDF)
+     </a>
+    </nav>
+   </section>
+  </main>
+  <footer>
+   Nathan Ng / Understanding creates capability. Capability creates new questions.
+  </footer>
+ </body>
+</html>
+

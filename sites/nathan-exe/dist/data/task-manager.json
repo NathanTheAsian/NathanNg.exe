@@ -1,0 +1,305 @@
+{
+  "previewLabel": "Fall 2026 · Nathan Ng",
+  "processNote": "Estimated weekly effort outside scheduled classes. SimuO includes 2 meeting hours + 4 engineering hours; Project Manager uses the midpoint of 1–2 hours. Focus is the share of reported effort, not skill. StudyHub and the leg raiser are included in course hours. A dash means completed or unallocated, not necessarily no activity.",
+  "status": "Learning. Building. Keeping the process running.",
+  "processes": [
+    {
+      "name": "BaSC Software Engineering",
+      "icon": "n.",
+      "color": "#5587b5",
+      "type": "education",
+      "status": "Second year",
+      "stack": "University of Ottawa",
+      "description": "Second-year software engineering student at the University of Ottawa. Fall 2026 coursework. Enrolled in co-op; available starting January 1, 2027.",
+      "hours": 0,
+      "focus": 0,
+      "tags": [],
+      "children": [
+        {
+          "name": "CEG 2136 · Computer Architecture I",
+          "icon": "SE",
+          "color": "#5587b5",
+          "type": "course",
+          "status": "Lab 4 in progress",
+          "stack": "Quartus / FPGA",
+          "description": "Computer architecture: designing components to complete specific tasks, building toward an end-of-semester 4-bit CPU with a control unit and ALU. Labs 1–3 are complete; the Lab 4 blueprint is drafted. I use the course as a challenge to stay organized, planning wire routes and component spacing before placing them in my Quartus BDF files. Approximately eight hours a week outside class.",
+          "hours": 8,
+          "focus": 21,
+          "tags": [],
+          "links": [
+            {
+              "label": "Architecture labs · BDF designs and 4-bit CPU",
+              "url": "projects/ceg2136-lab2.html"
+            },
+            {
+              "label": "Lab builds on GitHub",
+              "url": "https://github.com/NathanTheAsian/CEG2136"
+            }
+          ]
+        },
+        {
+          "name": "SEG 2105 · Introduction to Software Engineering",
+          "icon": "SE",
+          "color": "#5587b5",
+          "type": "course",
+          "status": "Building StudyHub",
+          "stack": "Kotlin / Android / Web",
+          "description": "I lead software architecture for StudyHub, an Android study-group app with a web component. I designed the client-server architecture and use code documentation and UML to communicate the design. Eight hours weekly outside class, including StudyHub.",
+          "hours": 8,
+          "focus": 21,
+          "tags": [],
+          "links": [
+            {
+              "label": "Explore project",
+              "url": "projects/studyhub.html"
+            }
+          ]
+        },
+        {
+          "name": "CSI 2110 · Data Structures and Algorithms",
+          "icon": "SE",
+          "color": "#5587b5",
+          "type": "course",
+          "status": "Learning",
+          "stack": "Java",
+          "description": "Alongside labs and theoretical coursework, I read Java documentation to understand implementations and learn how to write documentation that remains useful for years. Seven hours weekly outside class.",
+          "hours": 7,
+          "focus": 18,
+          "tags": [],
+          "links": [
+            {
+              "label": "Course repository",
+              "url": "https://github.com/NathanTheAsian/CSI2110"
+            }
+          ]
+        },
+        {
+          "name": "GNG 2101 · Product Development",
+          "icon": "SE",
+          "color": "#5587b5",
+          "type": "course",
+          "status": "Design & development",
+          "stack": "CAD / Team leadership",
+          "description": "I lead a team developing a wheelchair leg raiser. Compatibility with the client’s existing wheelchair is a central constraint, alongside cost and design decisions. Four hours weekly outside class.",
+          "hours": 4,
+          "focus": 10,
+          "tags": [],
+          "links": [
+            {
+              "label": "Explore project",
+              "url": "projects/wheelchair-leg-raiser.html"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "backgroundProcesses": [
+    {
+      "name": "Choom",
+      "icon": "{}",
+      "color": "#5587b5",
+      "type": "project",
+      "status": "Completed",
+      "stack": "Python · CNN · Computer vision",
+      "description": "Exploring artificial intelligence, one handwritten character at a time.",
+      "hours": 0,
+      "focus": 0,
+      "tags": [],
+      "links": [
+        {
+          "label": "Explore project",
+          "url": "projects/choom.html"
+        }
+      ]
+    },
+    {
+      "name": "2TheMoon",
+      "icon": "{}",
+      "color": "#5587b5",
+      "type": "project",
+      "status": "Early implementation",
+      "stack": "SystemVerilog · Hardware design · Planned C/C++ interface",
+      "description": "From learning how neural networks work to exploring the hardware that could train them.",
+      "hours": 4,
+      "focus": 10,
+      "tags": [],
+      "links": [
+        {
+          "label": "Explore project",
+          "url": "projects/2themoon.html"
+        }
+      ]
+    },
+    {
+      "name": "SimuO",
+      "icon": "{}",
+      "color": "#5587b5",
+      "type": "project",
+      "status": "In development",
+      "stack": "Python · OpenGL · Ray casting",
+      "description": "Building a 3D engine with SimuOttawa, and growing alongside the people who build it.",
+      "hours": 6,
+      "focus": 16,
+      "tags": [],
+      "links": [
+        {
+          "label": "Explore project",
+          "url": "projects/simuo.html"
+        }
+      ]
+    },
+    {
+      "name": "SimuO Project Manager",
+      "icon": "{}",
+      "color": "#5587b5",
+      "type": "project",
+      "status": "Work in progress",
+      "stack": "Client-server architecture · Tickets · Node diagrams",
+      "description": "Project management shaped around the way a small university club works.",
+      "hours": 1.5,
+      "focus": 4,
+      "tags": [],
+      "links": [
+        {
+          "label": "Explore project",
+          "url": "projects/project-manager.html"
+        }
+      ]
+    },
+    {
+      "name": "Nathan.exe",
+      "icon": "{}",
+      "color": "#5587b5",
+      "type": "project",
+      "status": "Evolving",
+      "stack": "HTML · CSS · JavaScript",
+      "description": "A personal portfolio imagined as an explorable desktop.",
+      "hours": 0,
+      "focus": 0,
+      "tags": [],
+      "links": [
+        {
+          "label": "Explore project",
+          "url": "projects/nathan-exe.html"
+        }
+      ]
+    },
+    {
+      "name": "Away from the keyboard",
+      "icon": "+",
+      "color": "#5587b5",
+      "type": "leisure",
+      "status": "Recharging",
+      "stack": "Gym / Racket sports / Art",
+      "description": "I enjoy the gym, badminton, and pickleball, as well as modern art, film, and animation. I appreciate architecture and engineering in many forms, and love learning about unfamiliar topics simply to understand how they work.",
+      "hours": 0,
+      "focus": 0,
+      "tags": []
+    }
+  ],
+  "pages": {
+    "Performance": {
+      "eyebrow": "Estimated effort / Fall 2026",
+      "title": "Where my attention goes.",
+      "description": "Approximately 38.5 hours per week of reported effort outside scheduled classes. These estimates include coursework, independent learning, club meetings, and engineering. They exclude unestimated portfolio and leisure time.",
+      "metrics": true
+    },
+    "Projects": {
+      "eyebrow": "Project directory",
+      "title": "Curiosity, put to work.",
+      "description": "Explore the motivation, contribution, current state, and next steps behind each project.",
+      "sections": [
+        {
+          "title": "Choom",
+          "html": "<p>Exploring artificial intelligence, one handwritten character at a time.</p><p><a href=\"projects/choom.html\">Explore Choom →</a></p>"
+        },
+        {
+          "title": "2TheMoon",
+          "html": "<p>From learning how neural networks work to exploring the hardware that could train them.</p><p><a href=\"projects/2themoon.html\">Explore 2TheMoon →</a></p>"
+        },
+        {
+          "title": "SimuO",
+          "html": "<p>Building a 3D engine with SimuOttawa, and growing alongside the people who build it.</p><p><a href=\"projects/simuo.html\">Explore SimuO →</a></p>"
+        },
+        {
+          "title": "SimuO Project Manager",
+          "html": "<p>Project management shaped around the way a small university club works.</p><p><a href=\"projects/project-manager.html\">Explore SimuO Project Manager →</a></p>"
+        },
+        {
+          "title": "StudyHub",
+          "html": "<p>Helping students find people to study with.</p><p><a href=\"projects/studyhub.html\">Explore StudyHub →</a></p>"
+        },
+        {
+          "title": "Wheelchair Leg Raiser",
+          "html": "<p>Designing around a client’s needs and the wheelchair they already use.</p><p><a href=\"projects/wheelchair-leg-raiser.html\">Explore Wheelchair Leg Raiser →</a></p>"
+        },
+        {
+          "title": "Nathan.exe",
+          "html": "<p>A personal portfolio imagined as an explorable desktop.</p><p><a href=\"projects/nathan-exe.html\">Explore Nathan.exe →</a></p>"
+        }
+      ]
+    },
+    "Startup": {
+      "eyebrow": "What keeps me moving",
+      "title": "A perpetual motion engine.",
+      "description": "Understanding builds capability, and capability opens up more things to understand. That cycle keeps me learning, building, and pushing myself further.",
+      "sections": [
+        {
+          "title": "Understand",
+          "text": "I follow questions across software, hardware, and the world around me. Choom led me from neural networks to the architecture behind AI."
+        },
+        {
+          "title": "Become capable",
+          "text": "I turn curiosity into practice: writing code, designing hardware, reading documentation, and working through problems."
+        },
+        {
+          "title": "Bring people along",
+          "text": "I care about how others read, use, and extend what I make. I use documentation and UML to share understanding, and invest in the people I work with."
+        }
+      ]
+    },
+    "Details": {
+      "eyebrow": "About Nathan / System properties",
+      "title": "Hello, I’m Nathan Ng.",
+      "description": "A dedicated, persistent software engineering student who wants to understand how things work—and become capable of building them.",
+      "sections": [
+        {
+          "title": "Understanding → capability → new questions",
+          "text": "I’m a second-year software engineering student at the University of Ottawa. I’m inspired by the concept of a perpetual motion engine: the drive to understand and become capable continually creates new reasons to learn. I push myself to keep going, and I care about making work that others can understand and carry forward."
+        },
+        {
+          "title": "Beyond engineering",
+          "text": "I enjoy bodybuilding, badminton, and pickleball, as well as modern arts, film, and animation. I appreciate architecture and engineering in many forms, and love learning about unfamiliar topics simply to understand how they work."
+        },
+        {
+          "title": "Co-op · Available January 1, 2027",
+          "text": "I’m seeking software engineering, hardware / FPGA, and machine learning opportunities where I can contribute while expanding my knowledge and capability."
+        },
+        {
+          "title": "Get in touch",
+          "html": "<p><a href=\"mailto:Nathan626ng@gmail.com\">Email Nathan</a><a href=\"https://www.linkedin.com/in/nathanckng/\" target=\"_blank\" rel=\"noopener noreferrer\">LinkedIn ↗</a></p><p><a href=\"assets/NathanNgResume.pdf\" target=\"_blank\" rel=\"noopener noreferrer\">Open my résumé (PDF)</a></p>"
+        }
+      ]
+    },
+    "How to Nathan": {
+      "eyebrow": "Core design values",
+      "title": "How to Nathan",
+      "description": "The standards I bring to my code, interfaces, documentation, and design process.",
+      "sections": [
+        {
+          "title": "01 · Documentation and understanding",
+          "text": "I want my code to communicate its intent. Clear naming, readable structure, and documentation should help someone follow what a program does and why it works that way. The standard I chase goes beyond familiarity with a language: if someone who does not know that language can still understand the logic and purpose of my code, I have gone beyond the baseline I set for myself."
+        },
+        {
+          "title": "02 · The black box approach",
+          "text": "I design methods, interfaces, and programs to work correctly and to be usable without requiring a complete understanding of their implementation. A developer should be able to understand the parameters, where the inputs come from, how they are used, and what the return values mean. Clear interfaces and documentation make that possible. Someone using a tool should be able to learn how to use it without first learning how it was built."
+        },
+        {
+          "title": "03 · Organization is efficiency",
+          "text": "I approach everything I design and implement with a consistent format and organization in mind. I use GitHub to keep my work available between my desktop and laptop, and to make classwork and examples easy to share with others. I also use UML and visual design to work through code structure and relationships. Planning how the pieces fit together helps me understand a system before and while I build it."
+        }
+      ]
+    }
+  }
+}

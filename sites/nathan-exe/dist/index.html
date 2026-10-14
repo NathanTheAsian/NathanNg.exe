@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width,initial-scale=1" name="viewport"/>
+  <meta content="Nathan Ng &mdash; software engineering, hardware, and machine learning projects. Available for co-op starting January 1, 2027." name="description"/>
+  <title>
+   Nathan.exe &mdash; Personal Task Manager
+  </title>
+  <link href="style.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <!-- Computer startup -->
+  <section aria-label="Computer startup" id="boot">
+   <div class="boot-console">
+    <p>
+     NATHAN SYSTEMS
+     <span>
+      BIOS v.2026
+     </span>
+    </p>
+    <hr/>
+    <div id="boot-lines">
+    </div>
+    <span class="cursor">
+     _
+    </span>
+   </div>
+   <div class="welcome">
+    <div class="brand-mark">
+     n
+     <span>
+      .
+     </span>
+    </div>
+    <h1>
+     Nathan.exe
+    </h1>
+    <div class="spinner">
+    </div>
+    <p>
+     Starting something personal.
+    </p>
+   </div>
+   <button id="skip">
+    Skip startup &rarr;
+   </button>
+   <span class="boot-foot">
+    PERSONAL OPERATING SYSTEM / EST. IN CURIOSITY
+   </span>
+  </section>
+  <main id="desktop" inert="">
+   <!-- Desktop introduction and shortcuts -->
+   <div class="desktop-caption">
+    <span>
+     PERSONAL WORKSPACE
+    </span>
+    <h1>
+     Understanding.
+     <br/>
+     Capability. Repeat.
+    </h1>
+    <p>
+     Nathan Ng &middot; Software engineering at uOttawa.
+     <br/>
+     Available for co-op starting January 1, 2027.
+    </p>
+   </div>
+   <div class="desktop-icons">
+    <button data-open="Processes">
+     <span class="desktop-icon chart-icon">
+      ▥
+     </span>
+     Task Manager
+    </button>
+    <button data-open="Details">
+     <span class="desktop-icon file-icon">
+      &equiv;
+     </span>
+     About Nathan
+    </button>
+    <a class="desktop-projects" href="projects/index.html">
+     <span class="desktop-icon file-icon">
+      ▤
+     </span>
+     Projects
+    </a>
+    <button id="open-cli">
+     <span class="desktop-icon terminal-icon">
+      &gt;_
+     </span>
+     nathangcli
+    </button>
+    <button id="reboot">
+     <span class="desktop-icon restart-icon">
+      &orarr;
+     </span>
+     Restart
+    </button>
+   </div>
+   <!-- Task Manager window -->
+   <section aria-label="Personal Task Manager" class="window" id="manager">
+    <header id="titlebar">
+     <span>
+      <span class="tiny-icon">
+       ▥
+      </span>
+      Nathan.exe &mdash; Task Manager
+     </span>
+     <div class="window-controls">
+      <button aria-label="Minimize" id="minimize">
+       &boxh;
+      </button>
+      <button aria-label="Maximize" id="maximize">
+       &square;
+      </button>
+      <button aria-label="Close" id="close">
+       &times;
+      </button>
+     </div>
+    </header>
+    <div class="menu">
+     <span>
+      Personal workspace
+     </span>
+     <button id="replay">
+      Replay startup
+     </button>
+     <span class="preview-label">
+      Fall 2026 &middot; Nathan Ng
+     </span>
+    </div>
+    <nav aria-label="Portfolio tabs" id="tabs">
+     <button aria-pressed="true" class="active">
+      Processes
+     </button>
+     <button aria-pressed="false">
+      Performance
+     </button>
+     <button aria-pressed="false">
+      Projects
+     </button>
+     <button aria-pressed="false">
+      Startup
+     </button>
+     <button aria-pressed="false">
+      Details
+     </button>
+    </nav>
+    <div id="content">
+    </div>
+    <footer class="window-footer">
+     <span>
+      <i>
+      </i>
+      System running. Still learning.
+     </span>
+     <button disabled="" id="inspect">
+      Inspect process
+     </button>
+    </footer>
+   </section>
+   <!-- nathangcli terminal window -->
+   <section aria-label="nathangcli terminal" hidden="" id="terminal">
+    <header class="terminal-title">
+     <span>
+      &gt;_ nathangcli
+     </span>
+     <button aria-label="Close terminal" id="close-cli">
+      &times;
+     </button>
+    </header>
+    <div class="terminal-body">
+     <p class="terminal-welcome">
+      nathangcli [version 1.0]
+     </p>
+     <p class="terminal-hint">
+      A small window into what I build.
+      <br/>
+      Type
+      <b>
+       ls
+      </b>
+      to find my project repos.
+      <br/>
+      Type
+      <b>
+       help
+      </b>
+      for commands.
+     </p>
+     <div aria-live="polite" aria-relevant="additions" id="terminal-output" role="log">
+     </div>
+     <form autocomplete="off" id="terminal-form">
+      <label for="terminal-input">
+       nathan@portfolio:~$
+      </label>
+      <input aria-label="Terminal command" autocapitalize="off" autocomplete="off" id="terminal-input" spellcheck="false"/>
+      <button aria-label="Run command" class="terminal-run" type="submit">
+       &crarr;
+      </button>
+     </form>
+    </div>
+   </section>
+   <div class="desktop-note">
+    NATHAN.EXE
+    <span>
+     01 / ALWAYS A WORK IN PROGRESS
+    </span>
+   </div>
+   <nav aria-label="Contact Nathan" class="recruiter-contact">
+    <a href="how-to-nathan.html">How to Nathan</a>
+    <a href="mailto:Nathan626ng@gmail.com">
+     Email Nathan
+    </a>
+    <a href="https://www.linkedin.com/in/nathanckng/" rel="noopener noreferrer" target="_blank">
+     LinkedIn &nearrow;
+    </a>
+    <a href="assets/NathanNgResume.pdf" rel="noopener noreferrer" target="_blank">
+     R&eacute;sum&eacute;
+    </a>
+   </nav>
+   <!-- Selected process details -->
+   <aside aria-label="Process details" class="detail-panel" hidden="" id="detail">
+    <button aria-label="Close details" id="dismiss">
+     &times;
+    </button>
+    <div id="detail-body">
+    </div>
+   </aside>
+   <!-- Desktop taskbar -->
+   <div class="taskbar">
+    <button aria-label="Open Task Manager" id="start">
+     <span class="windows-mark">
+      ▦
+     </span>
+    </button>
+    <span class="taskbar-name">
+     Nathan.exe
+    </span>
+    <button aria-label="Restore Task Manager" id="task-manager">
+     ▥
+    </button>
+    <button aria-label="Open nathangcli" id="task-cli">
+     &gt;_
+    </button>
+    <div class="tray">
+     <span class="online">
+      ●
+     </span>
+     <span>
+      Personal workspace
+     </span>
+     <time id="clock">
+     </time>
+    </div>
+   </div>
+  </main>
+  <script src="js/main.js" type="module">
+  </script>
+ </body>
+</html>
+

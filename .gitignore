@@ -1,0 +1,5 @@
+# Local generated files and machine-specific environments
+/output/
+/tmp/
+**/__pycache__/
+**/node_modules/

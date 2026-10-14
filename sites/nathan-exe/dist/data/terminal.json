@@ -1,0 +1,59 @@
+{
+  "name": "nathangcli",
+  "prompt": "nathan@portfolio:~$",
+  "greeting": "nathangcli [version 1.0]",
+  "hint": "Type ls to list my GitHub projects.\nUse cd <project> to explore its files, or cd .. to go back.\nClick any file link to open it on GitHub.\nPress Tab to complete commands and directory names.",
+  "commands": [
+    {
+      "name": "ls",
+      "aliases": [
+        "repos"
+      ],
+      "description": "List projects or files in the current directory",
+      "type": "list"
+    },
+    {
+      "name": "clear",
+      "description": "Clear the terminal",
+      "type": "clear"
+    },
+    {
+      "name": "help",
+      "description": "Show available commands",
+      "type": "help"
+    },
+    {
+      "name": "exit",
+      "description": "Close nathangcli",
+      "type": "exit"
+    },
+    {
+      "name": "cd",
+      "description": "cd <directory> — enter a project or folder; cd .. goes back",
+      "type": "cd"
+    },
+    {
+      "name": "pwd",
+      "description": "Show the current directory",
+      "type": "pwd"
+    },
+    {
+      "name": "github",
+      "description": "Open my GitHub profile",
+      "type": "link",
+      "url": "https://github.com/NathanTheAsian"
+    },
+    {
+      "name": "about",
+      "description": "About Nathan and co-op availability",
+      "type": "text",
+      "text": "Nathan Ng — second-year software engineering student at uOttawa. Understanding creates capability; capability creates new questions. Seeking software engineering, hardware/FPGA, and machine learning co-op roles starting January 1, 2027."
+    },
+    {
+      "name": "contact",
+      "description": "Email and LinkedIn",
+      "type": "text",
+      "text": "Email: Nathan626ng@gmail.com\nLinkedIn: https://www.linkedin.com/in/nathanckng/\nAvailable for co-op starting January 1, 2027."
+    }
+  ]
+}
